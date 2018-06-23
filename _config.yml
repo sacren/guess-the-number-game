@@ -1,0 +1,29 @@
+# _config.yml of guess-the-number-game
+
+title: Guess the number game
+description: >- # this means to ignore newlines until "baseurl:"
+  A game app that lets the user guess for a number
+baseurl: /guess-the-number-game
+
+author: © 2018 Jεan Sacren
+
+timezone: America/Denver
+encoding: utf-8
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
