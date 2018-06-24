@@ -1,6 +1,6 @@
 # _config.yml of guess-the-number-game
 
-title: Guess the number game
+title: Guess the Number Game
 description: >- # this means to ignore newlines until "baseurl:"
   A game app that lets the user guess for a number
 baseurl: /guess-the-number-game
