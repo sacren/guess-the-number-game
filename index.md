@@ -1,3 +1,3 @@
 ---
-layout: home
+layout: guess-the-number-game
 ---
