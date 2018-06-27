@@ -10,4 +10,8 @@ jQuery(function ($) {
 
   var guessCount = 1
   var resetButton
+
+  function checkGuess () {
+    window.alert('I am a placeholder')
+  }
 })
