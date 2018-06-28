@@ -1,7 +1,6 @@
 jQuery(function ($) {
   var randomNumber = Math.floor(Math.random() * 100) + 1
 
-  var guesses = document.querySelector('.guesses')
   var lastResult = document.querySelector('.lastResult')
   var lowOrHi = document.querySelector('.lowOrHi')
 
@@ -15,10 +14,12 @@ jQuery(function ($) {
     var userGuess = Number(guessField.value)
 
     if (guessCount === 1) {
-      guesses.textContent = 'Previous guess: '
+      $('.guesses').text('Previous guess: ' + userGuess)
+    } else {
+      $('.guesses').text(function () {
+        return $(this).text() + ' ' + userGuess
+      })
     }
-
-    guesses.textContent += userGuess + ' '
 
     if (userGuess === randomNumber) {
       lastResult.textContent = 'Congratulations! You got it right!'
