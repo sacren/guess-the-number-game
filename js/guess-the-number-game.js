@@ -12,6 +12,34 @@ jQuery(function ($) {
   var resetButton
 
   function checkGuess () {
-    window.alert('I am a placeholder')
+    var userGuess = Number(guessField.value)
+
+    if (guessCount === 1) {
+      guesses.textContent = 'Previous guess: '
+    }
+
+    guesses.textContent += userGuess + ' '
+
+    if (userGuess === randomNumber) {
+      lastResult.textContent = 'Congratulations! You got it right!'
+      lastResult.style.backgroundColor = 'green'
+      lowOrHi.textContent = ''
+      setGameOver()
+    } else if (guessCount === 10) {
+      lastResult.textContent = '!!!GAME OVER!!!'
+      setGameOver()
+    } else {
+      lastResult.textContent = 'Wrong!'
+      lastResult.style.backgroundColor = 'red'
+      if (userGuess > randomNumber) {
+        lowOrHi.textContent = 'Last guess was too high!'
+      } else {
+        lowOrHi.textContent = 'Last guess was too low!'
+      }
+    }
+
+    guessCount++
+    guessField.value = ''
+    guessField.focus()
   }
 })
