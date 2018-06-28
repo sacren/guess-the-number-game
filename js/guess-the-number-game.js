@@ -42,4 +42,6 @@ jQuery(function ($) {
     guessField.value = ''
     guessField.focus()
   }
+
+  $('.guessSubmit').click(checkGuess)
 })
