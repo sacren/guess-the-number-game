@@ -5,19 +5,18 @@ jQuery(function ($) {
   var lowOrHi = document.querySelector('.lowOrHi')
 
   var guessSubmit = document.querySelector('.guessSubmit')
-  var guessField = document.querySelector('.guessField')
 
   var guessCount = 1
   var resetButton
 
   function checkGuess () {
-    var userGuess = Number(guessField.value)
+    var userGuess = Number($('.guessField').val())
 
     if (guessCount === 1) {
-      $('.guesses').text('Previous guess: ' + userGuess)
+      $('.guesses').text('Previous guess: ' + $('.guessField').val())
     } else {
       $('.guesses').text(function () {
-        return $(this).text() + ' ' + userGuess
+        return $(this).text() + ' ' + $('.guessField').val()
       })
     }
 
@@ -40,8 +39,8 @@ jQuery(function ($) {
     }
 
     guessCount++
-    guessField.value = ''
-    guessField.focus()
+    $('.guessField').val('')
+    $('.guessField').focus()
   }
 
   $('.guessSubmit').click(checkGuess)
