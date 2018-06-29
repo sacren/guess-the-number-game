@@ -12,18 +12,20 @@ jQuery(function ($) {
   function checkGuess () {
     var userGuess = Number($('.guessField').val())
 
-    if (guessCount === 1) {
-      $('.guesses').text('Previous guess: ' + $('.guessField').val())
-    } else {
-      if (guessCount === 2) {
+    switch (guessCount) {
+      case 1:
+        $('.guesses').text('Previous guess: ' + $('.guessField').val())
+        break
+
+      case 2:
         var s = $('.guesses').text()
         s = s.replace('guess', 'guesses')
         $('.guesses').text(s)
-      }
 
-      $('.guesses').text(function () {
-        return $(this).text() + ' ' + $('.guessField').val()
-      })
+      default:
+        $('.guesses').text(function () {
+          return $(this).text() + ' ' + $('.guessField').val()
+        })
     }
 
     if (userGuess === randomNumber) {
