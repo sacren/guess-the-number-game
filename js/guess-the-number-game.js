@@ -15,6 +15,12 @@ jQuery(function ($) {
     if (guessCount === 1) {
       $('.guesses').text('Previous guess: ' + $('.guessField').val())
     } else {
+      if (guessCount === 2) {
+        var s = $('.guesses').text()
+        s = s.replace('guess', 'guesses')
+        $('.guesses').text(s)
+      }
+
       $('.guesses').text(function () {
         return $(this).text() + ' ' + $('.guessField').val()
       })
