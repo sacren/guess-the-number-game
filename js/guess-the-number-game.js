@@ -11,7 +11,7 @@ jQuery(function ($) {
 
   function checkGuess () {
     const guessStr = $('.guessField').val()
-    var userGuess = Number(guessStr)
+    const userGuess = Number(guessStr)
 
     switch (guessCount) {
       case 1:
