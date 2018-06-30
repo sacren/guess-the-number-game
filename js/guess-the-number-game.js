@@ -1,5 +1,5 @@
 jQuery(function ($) {
-  var randomNumber = Math.floor(Math.random() * 100) + 1
+  const randomNumber = Math.floor(Math.random() * 100) + 1
 
   var lastResult = document.querySelector('.lastResult')
   var lowOrHi = document.querySelector('.lowOrHi')
