@@ -10,11 +10,12 @@ jQuery(function ($) {
   var resetButton
 
   function checkGuess () {
-    var userGuess = Number($('.guessField').val())
+    const guessStr = $('.guessField').val()
+    var userGuess = Number(guessStr)
 
     switch (guessCount) {
       case 1:
-        $('.guesses').text('Previous guess: ' + $('.guessField').val())
+        $('.guesses').text('Previous guess: ' + guessStr)
         break
 
       case 2:
@@ -24,7 +25,7 @@ jQuery(function ($) {
 
       default:
         $('.guesses').text(function () {
-          return $(this).text() + ' ' + $('.guessField').val()
+          return $(this).text() + ' ' + guessStr
         })
     }
 
