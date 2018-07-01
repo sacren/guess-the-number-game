@@ -1,7 +1,6 @@
 jQuery(function ($) {
   const randomNumber = Math.floor(Math.random() * 100) + 1
 
-  var lastResult = document.querySelector('.lastResult')
   var lowOrHi = document.querySelector('.lowOrHi')
 
   var guessSubmit = document.querySelector('.guessSubmit')
@@ -30,16 +29,16 @@ jQuery(function ($) {
     }
 
     if (userGuess === randomNumber) {
-      lastResult.textContent = 'Congratulations! You got it right!'
-      lastResult.style.backgroundColor = 'green'
+      $('.lastResult').text('Congratulations! You got it right!')
+      $('.lastResult').css('backgroundColor', 'green')
       lowOrHi.textContent = ''
       setGameOver()
     } else if (guessCount === 10) {
-      lastResult.textContent = '!!!GAME OVER!!!'
+      $('.lastResult').text('!!!GAME OVER!!!')
       setGameOver()
     } else {
-      lastResult.textContent = 'Wrong!'
-      lastResult.style.backgroundColor = 'red'
+      $('.lastResult').text('Wrong!')
+      $('.lastResult').css('backgroundColor', 'red')
       if (userGuess > randomNumber) {
         lowOrHi.textContent = 'Last guess was too high!'
       } else {
