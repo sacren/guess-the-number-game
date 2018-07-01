@@ -1,8 +1,5 @@
 jQuery(function ($) {
   const randomNumber = Math.floor(Math.random() * 100) + 1
-
-  var guessSubmit = document.querySelector('.guessSubmit')
-
   var guessCount = 1
   var resetButton
 
