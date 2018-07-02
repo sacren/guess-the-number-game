@@ -3,6 +3,15 @@ jQuery(function ($) {
   var guessCount = 1
   var resetButton
 
+  function setGameOver () {
+    $('.guessField').prop('disabled', true)
+    $('.guessSubmit').prop('disabled', true)
+    $('main > div').append(document.createElement('button'))
+    $('div > button').addClass('resetGame')
+    $('.resetGame').text('Start new game')
+    $('.resetGame').click(resetGame)
+  }
+
   function checkGuess () {
     const guessStr = $('.guessField').val()
     const userGuess = Number(guessStr)
