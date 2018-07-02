@@ -6,8 +6,8 @@ jQuery(function ($) {
   function setGameOver () {
     $('.guessField').prop('disabled', true)
     $('.guessSubmit').prop('disabled', true)
-    $('main > div').append(document.createElement('button'))
-    $('div > button').addClass('resetGame')
+    $('.resultParas').after(document.createElement('button'))
+    $('.resultParas + button').addClass('resetGame')
     $('.resetGame').text('Start new game')
     $('.resetGame').click(resetGame)
   }
