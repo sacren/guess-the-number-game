@@ -3,6 +3,14 @@ jQuery(function ($) {
   var guessCount = 1
   var resetButton
 
+  function resetGame () {
+    guessCount = 1
+    $('.resultParas > p').text('')
+    $('.resetGame').remove()
+    $('.guessField').removeProp('disabled')
+    $('.guessSubmit').removeProp('disabled')
+  }
+
   function setGameOver () {
     $('.guessField').prop('disabled', true)
     $('.guessSubmit').prop('disabled', true)
