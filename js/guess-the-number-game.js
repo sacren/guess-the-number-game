@@ -1,7 +1,6 @@
 jQuery(function ($) {
   const randomNumber = Math.floor(Math.random() * 100) + 1
   var guessCount = 1
-  var resetButton
 
   function resetGame () {
     guessCount = 1
