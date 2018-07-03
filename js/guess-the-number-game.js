@@ -1,8 +1,9 @@
 jQuery(function ($) {
-  const randomNumber = Math.floor(Math.random() * 100) + 1
+  var randomNumber = Math.floor(Math.random() * 100) + 1
   var guessCount = 1
 
   function resetGame () {
+    randomNumber = Math.floor(Math.random() * 100) + 1
     guessCount = 1
     $('.resultParas > p').text('')
     $('.resetGame').remove()
