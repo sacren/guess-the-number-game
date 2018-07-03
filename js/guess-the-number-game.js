@@ -6,7 +6,7 @@ jQuery(function ($) {
     guessCount = 1
     $('.resultParas > p').text('')
     $('.resetGame').remove()
-    $('.guessField').removeProp('disabled')
+    $('.guessField').removeProp('disabled').focus()
     $('.guessSubmit').removeProp('disabled')
   }
 
@@ -63,4 +63,5 @@ jQuery(function ($) {
   }
 
   $('.guessSubmit').click(checkGuess)
+  $('.guessField').focus()
 })
