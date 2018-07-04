@@ -45,10 +45,12 @@ jQuery(function ($) {
       $('.lastResult').css('backgroundColor', 'green')
       $('.lowOrHi').text('')
       setGameOver()
-    } else if (guessCount === 10) {
-      $('.lastResult').text('!!!GAME OVER!!!')
-      setGameOver()
     } else {
+      if (guessCount === 10) {
+        $('.lastResult').text('!!!GAME OVER!!!')
+        setGameOver()
+      }
+
       $('.lastResult').text('Wrong!')
       $('.lastResult').css('backgroundColor', 'red')
       if (userGuess > randomNumber) {
