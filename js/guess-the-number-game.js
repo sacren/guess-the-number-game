@@ -51,8 +51,7 @@ jQuery(function ($) {
         setGameOver()
       }
 
-      $('.lastResult').text('Wrong!')
-      $('.lastResult').css('backgroundColor', 'red')
+      $('.lastResult').text('Wrong!').css('backgroundColor', 'red')
       if (userGuess > randomNumber) {
         $('.lowOrHi').text('Last guess was too high!')
       } else {
