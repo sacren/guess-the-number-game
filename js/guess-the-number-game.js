@@ -27,6 +27,9 @@ jQuery(function ($) {
     switch (guessCount) {
       case 1:
         $('.guesses').text('Previous guess: ' + guessStr)
+        if (randomNumber !== 1) {
+          $('.lastResult').text('Wrong!').css('backgroundColor', 'red')
+        }
         break
 
       case 2:
@@ -51,7 +54,6 @@ jQuery(function ($) {
         setGameOver()
       }
 
-      $('.lastResult').text('Wrong!').css('backgroundColor', 'red')
       if (userGuess > randomNumber) {
         $('.lowOrHi').text('Last guess was too high!')
       } else {
