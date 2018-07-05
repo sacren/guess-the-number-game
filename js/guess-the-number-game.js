@@ -27,7 +27,7 @@ jQuery(function ($) {
     switch (guessCount) {
       case 1:
         $('.guesses').text('Previous guess: ' + guessStr)
-        if (randomNumber !== 1) {
+        if (userGuess !== randomNumber) {
           $('.lastResult').text('Wrong!').css('backgroundColor', 'red')
         }
         break
