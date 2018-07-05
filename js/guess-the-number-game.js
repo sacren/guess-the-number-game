@@ -27,7 +27,9 @@ jQuery(function ($) {
       case 1:
         $('.guesses').text('Previous guess: ' + guessStr)
         if (userGuess !== randomNumber) {
-          $('.lastResult').text('Wrong!').css('backgroundColor', 'red')
+          $('.lastResult').text('Wrong!')
+                          .css('backgroundColor', 'red')
+                          .css('color', 'white')
         }
         break
 
@@ -45,6 +47,7 @@ jQuery(function ($) {
     if (userGuess === randomNumber) {
       $('.lastResult').text('Congratulations! You got it right!')
                       .css('backgroundColor', 'green')
+                      .css('color', 'white')
       $('.lowOrHi').text('')
       setGameOver()
     } else {
