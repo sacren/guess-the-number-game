@@ -16,8 +16,7 @@ jQuery(function ($) {
     $('.guessSubmit').prop('disabled', true)
     $('.resultParas').after(document.createElement('button'))
     $('.resultParas + button').addClass('resetGame')
-    $('.resetGame').text('Start new game')
-    $('.resetGame').click(resetGame)
+    $('.resetGame').text('Start new game').click(resetGame)
   }
 
   function checkGuess () {
@@ -45,7 +44,7 @@ jQuery(function ($) {
 
     if (userGuess === randomNumber) {
       $('.lastResult').text('Congratulations! You got it right!')
-      $('.lastResult').css('backgroundColor', 'green')
+                      .css('backgroundColor', 'green')
       $('.lowOrHi').text('')
       setGameOver()
     } else {
@@ -62,8 +61,7 @@ jQuery(function ($) {
     }
 
     guessCount++
-    $('.guessField').val('')
-    $('.guessField').focus()
+    $('.guessField').val('').focus()
   }
 
   $('.guessSubmit').click(checkGuess)
