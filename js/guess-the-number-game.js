@@ -41,8 +41,8 @@ jQuery(function ($) {
         })
 
       default:
-        $('.guesses').text(function () {
-          return $(this).text() + ' ' + guessStr
+        $('.guesses').text(function (i, s) {
+          return s + ' ' + guessStr
         })
     }
 
