@@ -36,9 +36,9 @@ jQuery(function ($) {
         break
 
       case 2:
-        var s = $('.guesses').text()
-        s = s.replace('guess', 'guesses')
-        $('.guesses').text(s)
+        $('.guesses').text(function (i, s) {
+          return s.replace('guess', 'guesses')
+        })
 
       default:
         $('.guesses').text(function () {
