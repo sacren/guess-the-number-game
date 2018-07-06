@@ -28,8 +28,10 @@ jQuery(function ($) {
         $('.guesses').text('Previous guess: ' + guessStr)
         if (userGuess !== randomNumber) {
           $('.lastResult').text('Wrong!')
-                          .css('backgroundColor', 'red')
-                          .css('color', 'white')
+                          .css({
+                            backgroundColor: 'red',
+                            color: 'white'
+                          })
         }
         break
 
@@ -46,8 +48,10 @@ jQuery(function ($) {
 
     if (userGuess === randomNumber) {
       $('.lastResult').text('Congratulations! You got it right!')
-                      .css('backgroundColor', 'green')
-                      .css('color', 'white')
+                      .css({
+                        backgroundColor: 'green',
+                        color: 'white'
+                      })
       $('.lowOrHi').text('')
       setGameOver()
     } else {
