@@ -26,8 +26,8 @@ jQuery(function ($) {
     $('.guessField').val(function (i, v) {
       guessStr = v
       userGuess = Number(v)
-      return v
-    })
+      return ''
+    }).focus()
 
     switch (guessCount) {
       case 1:
@@ -74,7 +74,6 @@ jQuery(function ($) {
     }
 
     guessCount++
-    $('.guessField').val('').focus()
   }
 
   $('.guessSubmit').click(checkGuess)
