@@ -20,8 +20,14 @@ jQuery(function ($) {
   }
 
   function checkGuess () {
-    const guessStr = $('.guessField').val()
-    const userGuess = Number(guessStr)
+    var guessStr
+    var userGuess
+
+    $('.guessField').val(function (i, v) {
+      guessStr = v
+      userGuess = Number(v)
+      return v
+    })
 
     switch (guessCount) {
       case 1:
