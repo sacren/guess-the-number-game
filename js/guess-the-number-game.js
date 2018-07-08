@@ -16,7 +16,7 @@ jQuery(function ($) {
     $('.guessSubmit').prop('disabled', true)
     $('.resultParas').after(document.createElement('button'))
     $('.resultParas + button').addClass('resetGame')
-    $('.resetGame').text('Start new game').click(resetGame)
+    $('.resetGame').text('Start All Over').click(resetGame)
   }
 
   function checkGuess () {
