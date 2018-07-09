@@ -22,12 +22,28 @@ jQuery(function ($) {
   function checkGuess () {
     var guessStr
     var userGuess
+    var wrongInput = true
 
     $('.guessField').val(function (i, v) {
       guessStr = v
       userGuess = Number(v)
+      if (Number.isInteger(userGuess) && userGuess >= 1 && userGuess <= 100) {
+        wrongInput = false
+      }
       return ''
     }).focus()
+
+    if (wrongInput) {
+      $('.guesses').text('')
+      $('.lastResult').text('!!!GAME OVER!!!')
+                      .css({
+                        backgroundColor: 'red',
+                        color: 'white'
+                      })
+      $('.lowOrHi').text('')
+      setGameOver()
+      return
+    }
 
     switch (guessCount) {
       case 1:
