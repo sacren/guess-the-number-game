@@ -1,4 +1,4 @@
-jQuery(function ($) {
+window.jQuery(function ($) {
   var randomNumber = Math.floor(Math.random() * 100) + 1
   var guessCount = 1
 
