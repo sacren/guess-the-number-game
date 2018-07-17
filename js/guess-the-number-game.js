@@ -60,7 +60,10 @@ window.jQuery(function ($) {
       case 2:
         $('.guesses').text(function (i, s) {
           return s.replace('guess', 'guesses')
+        }).text(function (i, s) {
+          return s + ' ' + guessStr
         })
+        break
 
       default:
         $('.guesses').text(function (i, s) {
